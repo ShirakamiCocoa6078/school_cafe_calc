@@ -15,6 +15,3 @@ body {
     color: antiquewhite;
     font-weight: bold;
 }
-select {
-    min-height: 30px;
-}
