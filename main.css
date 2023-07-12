@@ -15,6 +15,9 @@ body {
     color: antiquewhite;
     font-weight: bold;
 }
-.menus{
-    float:right;
+.description{
+    display:grid;
+    grid-template-columns: 1fr .5fr;
+    min-height: 30px;
+    justify-content: center;
 }
