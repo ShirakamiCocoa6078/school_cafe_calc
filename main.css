@@ -1,10 +1,5 @@
 body {
     background-color: rgb(62, 62, 62);
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0;
     color: antiquewhite;
 }
 
@@ -14,10 +9,4 @@ body {
     height: 100%;
     color: antiquewhite;
     font-weight: bold;
-}
-.description{
-    display:grid;
-    grid-template-columns: 1fr .5fr;
-    min-height: 30px;
-    justify-content: center;
 }
