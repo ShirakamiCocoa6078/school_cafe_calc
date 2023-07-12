@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe calculator</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="main.js" defer></script>
+    <script src="data.js" defer></script>
+    <script src="option.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <div class="header">
+        <span class="title">CAFE_CALCULATOR</span>
+    </div>
+    <div class="flex-container">
+        <div class="element nahida">
+            <div class="sector level">
+                <div class="title">MENU1</div>
+                <div class="description">
+                    <select id="Clevel" onchange="menued1()"> <!--메뉴 + -로 변경되게 만들기-->
+                    <option value="juice_1">ジュース1</option>
+                    <option value="juice_2">ジュース2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sector weapon">
+                <div class="title">MENU2</div>
+                <div class="description">
+                    <input list="dlweapon" id="weapon-listbox" onchange="menued2()">
+                </div>
+            </div>
+            <div class="sector weaponEnforce" id="weaponEnforce" style="visibility: hidden;">
+                <div class="titles">무기 돌파 레벨 / 재련 단계</div>
+                <h5>모든 무기는 돌파 이후<br>최대레벨시의 무기 능력치를 기준으로 합니다.</h5>
+                <div class="description" id="WeaponLevel">
+                    <img src="./image/levels/level0.PNG" id="WeaponLevelImage">
+                    <select name="WLevel" id="WLevel" onchange="WLevelChanged()"></select>
+                </div>
+                <div class="description" id="jaeryonLevel">
+                    <img src="./image/jaeryon/1jae.PNG" id="jaeryonImage">
+                    <select name="WLevel" id="JLevel" onchange="jaeryonChanged()"></select>
+                </div>
+            </div>
+        </div>
+        <div class="element star">
+            <h3>나히다의 운명의 별자리</h3>
+            <img src="./image/dol/0dol.PNG" id="dolpaImage" width="300",height="auto">
+            <div>
+                <select name="dolpa" id="dolpa" onchange="dolpaChanged()">
+                </select>
+            </div>
+        </div>
+
+        <div class="element etc">
+            <div style="margin: 10px">
+            <div class="title">기타 요소를 통한 원소 마스터리 수급</div>
+            <div>
+            모든 항목들은 나무위키 나히다 문서의 <a class="namulink" href="https://namu.wiki/w/%EB%82%98%ED%9E%88%EB%8B%A4#s-4"
+                    target="_blank">4.운용/원소 마스터리 버프 목록</a>을 참조하였습니다.<br>
+                    <img src="./image/alpano.png" width="90"><span>설명은 내 알빠가 아니니 위에 무지개링크타고 찾아보세요.</span>
+            </div>
+            <label class="aw">파티 내 원소를 입력해주세요(나히다 제외 3명)</label><br>
+            <label class="aww">1 : <select name="first" id="first">
+                <option value="etc" value="default">기타 원소</option>
+                <option value="ful">풀 원소</option></select>
+                2 : <select name="second" id="second">
+                    <option value="etc" value="default">기타 원소</option>
+                    <option value="ful">풀 원소</option></select>
+                3 : <select name="third" id="third">
+                    <option value="etc" value="default">기타 원소</option>
+                    <option value="ful">풀 원소</option></select></label><br><br>
+        </div>
+    </div>
+    </div>
+    <div class="element etc2">
+        <a class="imgLink"
+                href="https://raw.githubusercontent.com/ShirakamiCocoa6078/nahida_wunma_calculator/main/%EC%B0%B8%EA%B3%A0%EC%9A%A9%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%95%8C%EB%B9%A0%EB%85%B8.PNG" target="_blank">사진한짤정리</a>
+                <br>
+        <div><input type="checkbox" name="etc" id="2c" value="2c"><label for="2">교관 4세트<strong> + 120pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="3c" value="3c"><label for="3">종말 탄식의 노래(5성 활)<strong> + 100pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="4c" value="4c"><label for="4">원목의 검(4성 한손검)<strong> + 60pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="5c" value="5c"><label for="5">숲의 리게일리어(4성 양손검)<strong> + 60pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="6c" value="6c"><label for="6">여행자/풀속성 돌파 특성 1<strong> + 6pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="7c" value="7c"><label for="7">알베도 돌파 특성 2<strong> + 125pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="8c" value="8c"><label for="8">카에데하라 카즈하 운명의 자리 2돌<strong> + 200pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="9c" value="9c"><label for="9">타이나리 운명의 자리 4돌<strong> + 60pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="10c" value="10c"><label for="10">닐루 돌파 특성 1<strong> + 100pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="11c" value="11c"><label for="11">디오나 운명의 자리 6돌<strong> + 200pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="12c" value="12c"><label for="12">시카노인 헤이조 돌파 특성 2<strong> + 80pt</strong></script></label></div>
+            <div><input type="checkbox" name="etc" id="13c" value="13c"><label for="13">콜레이 운명의 자리 4돌<strong> + 80pt</strong></script></label></div>
+            <h4 id="warning"><strong>⚠선택지 중 떠오르는 천일 밤의 꿈을 제외한 무기와 스택들은<br>개발자의 수학적 능력 부족으로 1재련/1스택 기준으로 계산됩니다.⚠</strong></h4>
+        </div>
+    </div>
+    <div class="element nahida">
+        <button onclick="reloading()">개발자가 바보라 자동으로 값을 못넣음 눌러주세요</button>
+        <div class="title">나히다의 원소 마스터리 필요량(위의 체크박스를 통해 조건 추가 가능)</div>
+        <div class="level">
+            <h4 id="Efirst">나히다 기본(무기 제외) 성유물 필요 원소 마스터리 : </h4>
+            <h4 id="Esecond">나히다 무기포함 성유물 필요 원소 마스터리 : </h4>
+            <h4 id="Ethird">상위 포함 1마리 마킹시 / 4마리 이상 마킹시 : </h4>
+            <h4 id="Efourth">상위 포함 체크조건 포함시 나히다의 원소 마스터리 = </h4>
+            <h3>하위 값들은 4돌이상 적 1명 마킹, 원소반응 후 기준입니다. (풀공명은 50pt만)</h3>
+            <h4 id="Efifth">공풀치(도금된 꿈/숲의 기억) = </h4>
+            <h4 id="Esixth">원풀치(도금된 꿈/숲의 기억) = </h4>
+            <h4 id="Eseventh">원원치(도금된 꿈/숲의 기억) = </h4>
+            <h4 id="Eeighth">원원원(도금된 꿈/숲의 기억) = </h4>
+            <h6>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h6>
+            <h4 id="Esip"></h4>
+            <h4 id="Esipil"></h4>
+            <h4 id="Esipe"></h4>
+            <h4 id="Esipsam"></h4>
+        </div>
+    </div>
+</body>
+
+</html>
