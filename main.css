@@ -15,3 +15,6 @@ body {
     color: antiquewhite;
     font-weight: bold;
 }
+.menus{
+    float:right;
+}
