@@ -29,7 +29,19 @@
             <div class="sector weapon">
                 <div class="title">MENU2</div>
                 <div class="description">
-                    <input list="dlweapon" id="weapon-listbox" onchange="menued2()">
+                    <select list="dlweapon" onchange="menued2()">
+                    <option value="2th_1">物1</option>
+                    <option value="2th_2">物2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="menu3">
+                <div class="title">MENU3</div>
+                <div class="description">
+                    <select list="menu3" onchange="menued3()">
+                    <option value="set_1">セット1</option>
+                    <option value="set_2">セット2</option>
+                    </select>
                 </div>
             </div>
             <div class="sector weaponEnforce" id="weaponEnforce" style="visibility: hidden;">
