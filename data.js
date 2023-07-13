@@ -94,7 +94,7 @@ function order(){
   resultValue += `合計 : ${food_cost_value}円`
   console.log(resultElement)
   const h2 = document.createElement("h2")
-  h2.setAttribute('class', `res${order_count}`);
+  h2.setAttribute('id', `res${order_count}`);
   h2.innerText =`
   -----------------------------
   ${order_count}番目
@@ -107,7 +107,7 @@ function order(){
   }
 }
 function cancel_order(){
-  var a = document.getElementByClassName(`res${order_count-1}`)
+  var a = document.getElementById(`res${order_count-1}`)
   a.remove();
 
 }
