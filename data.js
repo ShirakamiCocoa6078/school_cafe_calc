@@ -84,13 +84,13 @@ function order(){
       delete resultElement[key]
     }
   }
-  const resultValue = '';
+  var resultValue = '';
   for(const key in resultElement){
     resultValue += `${food_value[key]} ${resultElement[key]}個   ${food_cost[food_value[key]]}\n`
   }
   console.log(resultElement)
   const h2 = document.createElement("h2")
-  h2.createTextNode(`
+  h2.innerText(`
   -----------------------------
   ${resultValue}
   -----------------------------
