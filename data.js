@@ -108,6 +108,7 @@ function order(){
 }
 function cancel_order(){
   var a = document.getElementById(`res${order_count-1}`)
+  order_count -= 1;
   a.remove();
 
 }
