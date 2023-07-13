@@ -96,5 +96,7 @@ function order(){
   -----------------------------
   `)
   document.getElementById("ordered").appendChild(h2);
-  //document.getElementById(`value${i}`).innerText = 0;
+  for(var i=1;i<=12;i++){
+    document.getElementById(`value${i}`).innerText = 0;
+  }
 }
