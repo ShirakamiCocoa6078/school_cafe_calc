@@ -61,6 +61,7 @@ function count(type, num)  {
   // 결과 출력
   resultElement.innerText = number;
 }
+var order_count = 1;
 function order(){
   const resultElement = {
   "value1":0,
@@ -86,16 +87,18 @@ function order(){
   }
   var resultValue = '';
   for(const key in resultElement){
-    resultValue += `${food_value[key]} ${resultElement[key]}個   ${food_cost[food_value[key]]}\n`
+    resultValue += `${food_value[key]} ${resultElement[key]}個   ${food_cost[food_value[key]]}円\n`
   }
   console.log(resultElement)
   const h2 = document.createElement("h2")
   h2.innerText =`
   -----------------------------
+  ${order_count}番目
   ${resultValue}
   -----------------------------
   `
   document.getElementById("ordered").appendChild(h2);
+  order_count += 1;
   for(var i=1;i<=12;i++){
     document.getElementById(`value${i}`).innerText = 0;
   }
