@@ -79,7 +79,12 @@ select {
 .buttons{
     width:60pt;
     height:40pt;
-    font-size:x-large;
+    font-size:xx-large;
+}
+.buttons2{
+    width: 60pt;
+    height:40pt;
+    font-size:medium;
 }
 .values{
     color:red;
