@@ -26,6 +26,20 @@ const food_num = {
   "ガリガリ君":0,
   "モナ王":0
 }
+const food_value = {
+  "ガリガリソーダ":'value1',
+"クリームソーダ":'value2',
+"コーラ":'value3',
+"カルピス":'value4',
+"レモン":'value5',
+"リンゴ":'value6',
+"みかん":'value7',
+"ファンタ":'value8',
+"スーパーカップ":'value9',
+"うずまきソフト":'value10',
+"ガリガリ君":'value11',
+"モナ王":'value12'
+}
 const countNum = 0;
 function count(type, num)  {
   // 결과를 표시할 element
@@ -75,5 +89,6 @@ function order(){
     console.log(`${key} : ${resultElement[key]}`)
   }
   console.log(resultElement)
+  //document.getElementById(`value${i}`).innerText = 0;
 
 }

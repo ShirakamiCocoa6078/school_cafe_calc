@@ -79,6 +79,7 @@ select {
 .buttons{
     width:60pt;
     height:40pt;
+    font-size:x-large;
 }
 .values{
     color:red;
