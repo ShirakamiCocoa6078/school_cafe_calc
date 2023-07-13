@@ -1,4 +1,4 @@
-const food_list = {
+const food_cost = {
   "ガリガリソーダ":150,
   "クリームソーダ":200,
   "コーラ":50,
@@ -27,19 +27,18 @@ const food_num = {
   "モナ王":0
 }
 const food_value = {
-  "ガリガリソーダ":'value1',
-"クリームソーダ":'value2',
-"コーラ":'value3',
-"カルピス":'value4',
-"レモン":'value5',
-"リンゴ":'value6',
-"みかん":'value7',
-"ファンタ":'value8',
-"スーパーカップ":'value9',
-"うずまきソフト":'value10',
-"ガリガリ君":'value11',
-"モナ王":'value12'
-}
+  'value1': 'ガリガリソーダ', 
+'value2': 'クリームソーダ', 
+'value3': 'コーラ', 
+'value4': 'カルピス', 
+'value5': 'レモン', 
+'value6': 'リンゴ', 
+'value7': 'みかん', 
+'value8': 'ファンタ', 
+'value9': 'スーパーカップ', 
+'value10': 'うずまきソフト', 
+'value11': 'ガリガリ君', 
+'value12': 'モナ王'}
 const countNum = 0;
 function count(type, num)  {
   // 결과를 표시할 element
@@ -85,10 +84,17 @@ function order(){
       delete resultElement[key]
     }
   }
+  const resultValue = '';
   for(const key in resultElement){
-    console.log(`${key} : ${resultElement[key]}`)
+    resultValue += `${food_value[key]} ${resultElement[key]}個   ${food_cost[food_value[key]]}\n`
   }
   console.log(resultElement)
+  const h2 = document.createElement("h2")
+  h2.createTextNode(`
+  -----------------------------
+  ${resultValue}
+  -----------------------------
+  `)
+  document.getElementById("ordered").appendChild(h2);
   //document.getElementById(`value${i}`).innerText = 0;
-
 }
