@@ -13,18 +13,22 @@ const food_list = {
     "モナ王":100
 }
 const countNum = 0;
-function count(type)  {
+function count(type, num)  {
     // 결과를 표시할 element
-    const resultElement = document.getElementById('ordered');
+    const resultElement = document.getElementByValue(`value${num}`);
     
     // 현재 화면에 표시된 값
     let number = resultElement.innerText;
     
     // 더하기/빼기
-    if(type.substr(0,4) === 'plus'){
+    if(type.substr(0,4) === 'plus' || type === "garigari_plus" || type === "cream_plus"){
       number = parseInt(number) + 1;
-    }else if(type.substr(0,5) === 'minus')  {
-      number = parseInt(number) - 1;
+    }else if(type.substr(0,5) === 'minus' || type === "garigari_minus" || type === "cream_minus")  {
+      if(number<=0){
+        {}
+      }else{
+        number = parseInt(number) - 1;
+      }
     }
     
     // 결과 출력
