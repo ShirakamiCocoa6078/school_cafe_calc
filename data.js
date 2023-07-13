@@ -86,9 +86,12 @@ function order(){
     }
   }
   var resultValue = '';
+  var food_cost_value = 0;
   for(const key in resultElement){
     resultValue += `${food_value[key]} ${resultElement[key]}個   ${food_cost[food_value[key]]}円\n`
+    food_cost_value += food_cost[food_value[key]]
   }
+  resultValue += `合計 : ${food_cost_value}円`
   console.log(resultElement)
   const h2 = document.createElement("h2")
   h2.innerText =`
