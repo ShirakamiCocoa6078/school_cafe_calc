@@ -34,6 +34,7 @@ function count(type, num)  {
     // 결과 출력
     resultElement.innerText = number;
   }
+  const testValue = null;
   function order(){
     const resultElement = {
     "ガリガリソーダ":0,
@@ -49,7 +50,7 @@ function count(type, num)  {
     "ガリガリ君":0,
     "モナ王":0
 }
-    for(var i = 0; i<=12; i++){
+    for(var i = 1; i<=12; i++){
       resultElement[document.getElementById(`value${i}`)] = Number(document.getElementById(`value${i}`).innerText)
     }
     for(const key in resultElement){
@@ -57,6 +58,7 @@ function count(type, num)  {
         delete resultElement[key]
       }
     }
+    testValue=resultElement
     console.log(resultElement)
 
   }
