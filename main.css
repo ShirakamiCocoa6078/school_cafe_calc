@@ -102,3 +102,7 @@ select {
     margin-right: 5.67px;
     scale: 200%;
 }
+.buttons{
+    width:60pt;
+    height:60pt;
+}
