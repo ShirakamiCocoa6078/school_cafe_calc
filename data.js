@@ -76,7 +76,7 @@ function order(){
     "value10":0,
     "value11":0,
     "value12":0,
-}
+  }
   for(var i = 1; i<=12; i++){
     resultElement[`value${i}`] = Number(document.getElementById(`value${i}`).innerText)
   }
@@ -94,6 +94,7 @@ function order(){
   resultValue += `合計 : ${food_cost_value}円`
   console.log(resultElement)
   const h2 = document.createElement("h2")
+  h2.setAttribute('class', `res${order_count}`);
   h2.innerText =`
   -----------------------------
   ${order_count}番目
@@ -104,4 +105,9 @@ function order(){
   for(var i=1;i<=12;i++){
     document.getElementById(`value${i}`).innerText = 0;
   }
+}
+function cancel_order(){
+  var a = document.getElementByClassName(`res${order_count-1}`)
+  a.remove();
+
 }
