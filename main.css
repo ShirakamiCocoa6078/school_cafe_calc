@@ -70,32 +70,6 @@ select {
     justify-content: center;
 }
 
-.namulink, .imgLink, strong, #warning{
-    color: rgb(252, 70, 70);
-}
-@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
-    .namulink, .imgLink{
-    background: -webkit-linear-gradient(0deg, red, orange, yellow, rgb(3, 199, 3), rgb(79, 79, 255), rgb(69, 69, 255), rgb(214, 19, 214));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}}
-#dolpaImage{
-    width:360px;
-    height:477px;
-    object-fit: fill;
-}
-.aww{
-    margin-left: 20px;
-}
-#PlusJaeryon2, #PlusJaeryon3{
-    margin-left: 20px;
-}
-#Junmu{
-    margin-bottom: 5px;
-}
-.cancelBtn{
-    margin-top: 5px;
-}
 .result{
     margin-top: 30px;
     margin-left: 35px;
@@ -103,6 +77,6 @@ select {
     scale: 200%;
 }
 .buttons{
-    width:40pt;
-    height:60pt;
+    width:60pt;
+    height:40pt;
 }
