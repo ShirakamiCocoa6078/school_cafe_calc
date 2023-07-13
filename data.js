@@ -98,7 +98,6 @@ function order(){
   -----------------------------
   ${order_count}番目
   ${resultValue}
-  -----------------------------
   `
   document.getElementById("ordered").prepend(h2);
   order_count += 1;
