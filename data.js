@@ -90,11 +90,11 @@ function order(){
   }
   console.log(resultElement)
   const h2 = document.createElement("h2")
-  h2.innerText(`
+  h2.innerText =`
   -----------------------------
   ${resultValue}
   -----------------------------
-  `)
+  `
   document.getElementById("ordered").appendChild(h2);
   for(var i=1;i<=12;i++){
     document.getElementById(`value${i}`).innerText = 0;
