@@ -34,3 +34,29 @@ function count(type, num)  {
     // 결과 출력
     resultElement.innerText = number;
   }
+  function order(){
+    const resultElement = {
+    "ガリガリソーダ":0,
+    "クリームソーダ":0,
+    "コーラ":0,
+    "カルピス":0,
+    "レモン":0,
+    "リンゴ":0,
+    "みかん":0,
+    "ファンタ":0,
+    "スーパーカップ":0,
+    "うずまきソフト":0,
+    "ガリガリ君":0,
+    "モナ王":0
+}
+    for(var i = 0; i<=12, i++){
+      resultElement[document.getElementById(`value${i}`)] = Number(document.getElementById(`value${i}`).innerText)
+    }
+    for(const key in resultElement){
+      if(resultElement[key] === 0){
+        delete resultElement[key]
+      }
+    }
+    console.log(resultElement)
+
+  }
