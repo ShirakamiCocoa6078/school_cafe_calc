@@ -49,7 +49,7 @@ function count(type, num)  {
     "ガリガリ君":0,
     "モナ王":0
 }
-    for(var i = 0; i<=12, i++){
+    for(var i = 0; i<=12; i++){
       resultElement[document.getElementById(`value${i}`)] = Number(document.getElementById(`value${i}`).innerText)
     }
     for(const key in resultElement){
