@@ -15,7 +15,7 @@ const food_list = {
 const countNum = 0;
 function count(type, num)  {
     // 결과를 표시할 element
-    const resultElement = document.getElementByValue(`value${num}`);
+    const resultElement = document.getElementById(`value${num}`);
     
     // 현재 화면에 표시된 값
     let number = resultElement.innerText;
