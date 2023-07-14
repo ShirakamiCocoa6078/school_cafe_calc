@@ -40,6 +40,20 @@ const food_value = {
 'value11': 'ガリガリ君', 
 'value12': 'モナ王'}
 const countNum = 0;
+var order_count = 1;
+function onLoad(){
+  if(localStorage.getItem('order_count') == null){
+    order_count = 1;
+  }else{
+    order_count = localStorage.getItem('order_count')
+  }
+  if(localStorage.getItem('data') == null){
+    {}
+  }else{
+    var GetData = localStorage.getItem("data")
+    document.getElementById("ordered").prepend(GetData)
+  }
+}
 function count(type, num)  {
   // 결과를 표시할 element
   const resultElement = document.getElementById(`value${num}`);
@@ -61,7 +75,7 @@ function count(type, num)  {
   // 결과 출력
   resultElement.innerText = number;
 }
-var order_count = 1;
+
 function order(){
   const resultElement = {
   "value1":0,
@@ -107,6 +121,7 @@ function order(){
   }
   const dataValue = document.getElementById("ordered").innerHTML
   localStorage.setItem("data", dataValue)
+  localStorage.setItem('order_count', order_count)
 }
 function cancel_order(){
   if(order_count == 1){
@@ -117,6 +132,7 @@ function cancel_order(){
     a.remove();
     const dataValue = document.getElementById("ordered").innerHTML
     localStorage.setItem("data", dataValue)
+    localStorage.setItem('order_count', order_count)
   }
 
 }
