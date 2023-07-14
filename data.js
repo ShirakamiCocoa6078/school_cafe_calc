@@ -105,6 +105,7 @@ function order(){
   for(var i=1;i<=12;i++){
     document.getElementById(`value${i}`).innerText = 0;
   }
+  localStorage.setItem("data", "")
 }
 function cancel_order(){
   if(order_count == 1){
@@ -113,6 +114,7 @@ function cancel_order(){
     var a = document.getElementById(`res${order_count-1}`)
     order_count -= 1;
     a.remove();
+    localStorage.setItem("data", "")
   }
 
 }
