@@ -109,7 +109,7 @@ function order(){
 function cancel_order(){
   if(order_count == 1){
     {}
-  }else{
+  }else if(order_count > 1){
     var a = document.getElementById(`res${order_count-1}`)
     order_count -= 1;
     a.remove();
