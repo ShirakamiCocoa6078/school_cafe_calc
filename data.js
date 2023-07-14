@@ -107,7 +107,7 @@ function order(){
   }
 }
 function cancel_order(){
-  if(order_count === 1){
+  if(order_count == 1){
     {}
   }else{
     var a = document.getElementById(`res${order_count-1}`)
