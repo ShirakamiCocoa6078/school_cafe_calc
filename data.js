@@ -107,8 +107,12 @@ function order(){
   }
 }
 function cancel_order(){
-  var a = document.getElementById(`res${order_count-1}`)
-  order_count -= 1;
-  a.remove();
+  if(order_count === 0){
+    {}
+  }else{
+    var a = document.getElementById(`res${order_count-1}`)
+    order_count -= 1;
+    a.remove();
+  }
 
 }
