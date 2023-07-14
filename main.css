@@ -94,3 +94,12 @@ select {
 .values{
     color:rgb(165, 69, 69);
 }
+.element .nahida{
+    color:rgba(26, 255, 0, 0.34);
+}
+.element .star{
+    color:rgba(99, 74, 255, 0.352);
+}
+.element .etc{
+    color:rgba(255, 0, 0, 0.326)
+}
