@@ -89,7 +89,7 @@ function order(){
     "value12":0,
     "value13":0
   }
-  for(var i = 1; i<=12; i++){
+  for(var i = 1; i<=13; i++){
     resultElement[`value${i}`] = Number(document.getElementById(`value${i}`).innerText)
   }
   for(const key in resultElement){
@@ -117,7 +117,7 @@ function order(){
   localStorage.setItem(`data${order_count}`, dataValue)
   localStorage.setItem('order_count', order_count)
   order_count += 1;
-  for(var i=1;i<=12;i++){
+  for(var i=1;i<=13;i++){
     document.getElementById(`value${i}`).innerText = 0;
   }
 }
