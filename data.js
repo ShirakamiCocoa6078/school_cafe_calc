@@ -42,18 +42,10 @@ const food_value = {
 const countNum = 0;
 var order_count = 1;
 function loading(){
-  if(localStorage.getItem('order_count') == null){
-    order_count = 1;
-  }else{
-    order_count = Number(localStorage.getItem('order_count'))
-  }
-  if(localStorage.getItem('data') == null){
-    {}
-  }else{
-    for(var a=1; a<=Number(localStorage.getItem(order_count)); a++){
-      var GetData = localStorage.getItem(`data${a}`)
-      document.getElementById("ordered").prepend(GetData)
-    }
+  order_count = Number(localStorage.getItem('order_count'))
+  for(var a=1; a<=Number(localStorage.getItem(order_count)); a++){
+    var GetData = localStorage.getItem(`data${a}`)
+    document.getElementById("ordered").prepend(GetData)
   }
 }
 function count(type, num)  {
