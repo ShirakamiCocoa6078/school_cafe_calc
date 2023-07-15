@@ -50,7 +50,7 @@ function loading(){
   if(localStorage.getItem('data') == null){
     {}
   }else{
-    for(var a; a<=Number(localStorage.getItem(order_count)); a++){
+    for(var a=1; a<=Number(localStorage.getItem(order_count)); a++){
       var GetData = localStorage.getItem(`data${a}`)
       document.getElementById("ordered").prepend(GetData)
     }
