@@ -41,7 +41,7 @@ const food_value = {
 'value12': 'モナ王'}
 const countNum = 0;
 var order_count = 1;
-function onLoad(){
+function loading(){
   if(localStorage.getItem('order_count') == null){
     order_count = 1;
   }else{
