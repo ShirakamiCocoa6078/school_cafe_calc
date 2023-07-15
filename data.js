@@ -45,7 +45,7 @@ function loading(){
   if(localStorage.getItem('order_count') == null){
     order_count = 1;
   }else{
-    order_count = localStorage.getItem('order_count')
+    order_count = Number(localStorage.getItem('order_count'))
   }
   if(localStorage.getItem('data') == null){
     {}
