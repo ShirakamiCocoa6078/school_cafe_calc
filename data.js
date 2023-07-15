@@ -50,8 +50,10 @@ function loading(){
   if(localStorage.getItem('data') == null){
     {}
   }else{
-    var GetData = localStorage.getItem("data")
-    document.getElementById("ordered").innerHTML = GetData
+    for(var a; a<=localStorage.getItem(order_count); a++){
+      var GetData = localStorage.getItem(`data${a}`)
+      document.getElementById("ordered").prepend(GetData)
+    }
   }
 }
 function count(type, num)  {
@@ -115,13 +117,13 @@ function order(){
   ${resultValue}
   `
   document.getElementById("ordered").prepend(h2);
+  const dataValue = h2
+  localStorage.setItem(`data${order_count}`, dataValue)
+  localStorage.setItem('order_count', order_count)
   order_count += 1;
   for(var i=1;i<=12;i++){
     document.getElementById(`value${i}`).innerText = 0;
   }
-  const dataValue = document.getElementById("ordered").innerHTML
-  localStorage.setItem("data", dataValue)
-  localStorage.setItem('order_count', order_count)
 }
 function cancel_order(){
   if(order_count == 1){
@@ -130,8 +132,8 @@ function cancel_order(){
     var a = document.getElementById(`res${order_count-1}`)
     order_count -= 1;
     a.remove();
-    const dataValue = document.getElementById("ordered").innerHTML
-    localStorage.setItem("data", dataValue)
+    const dataValue = `data${order_count+1}`
+    localStorage.removeItem("data", dataValue)
     localStorage.setItem('order_count', order_count)
   }
 
