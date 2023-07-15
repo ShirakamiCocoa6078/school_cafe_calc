@@ -7,6 +7,7 @@ const food_cost = {
   "リンゴ":50,
   "みかん":50,
   "ファンタ":50,
+  "メロンソーダ":50,
   "スーパーカップ":100,
   "うずまきソフト":100,
   "ガリガリ君":100,
@@ -21,6 +22,7 @@ const food_num = {
   "リンゴ":0,
   "みかん":0,
   "ファンタ":0,
+  "メロンソーダ":0,
   "スーパーカップ":0,
   "うずまきソフト":0,
   "ガリガリ君":0,
@@ -38,7 +40,8 @@ const food_value = {
 'value9': 'スーパーカップ', 
 'value10': 'うずまきソフト', 
 'value11': 'ガリガリ君', 
-'value12': 'モナ王'}
+'value12': 'モナ王',
+'value13': "メロンソーダ"}
 const countNum = 0;
 var order_count = 1;
 function loading(){
@@ -84,6 +87,7 @@ function order(){
     "value10":0,
     "value11":0,
     "value12":0,
+    "value13":0
   }
   for(var i = 1; i<=12; i++){
     resultElement[`value${i}`] = Number(document.getElementById(`value${i}`).innerText)
