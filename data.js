@@ -51,7 +51,7 @@ function loading(){
     {}
   }else{
     var GetData = localStorage.getItem("data")
-    document.getElementById("ordered").prepend(`${GetData}`)
+    document.getElementById("ordered").innerHTML = GetData
   }
 }
 function count(type, num)  {
